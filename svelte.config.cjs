@@ -1,6 +1,7 @@
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
 const pkg = require('./package.json');
+const WindiCSS = require('vite-plugin-windicss').default
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
@@ -19,7 +20,10 @@ module.exports = {
 		vite: {
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
-			}
+			},
+			plugins: [
+				WindiCSS()
+			]
 		}
 	}
 };
