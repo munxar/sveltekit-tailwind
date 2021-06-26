@@ -3,10 +3,16 @@
 	import { onMount } from 'svelte';
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	onMount(() => {
-		import('virtual:windi-devtools');
+		// todo: can't get this to work with current sveltekit and windicss version
+		// import('virtual:windi-devtools');
 	});
 	let dark = false;
 </script>
+
+<svelte:head>
+	<title>Sveltekit WindiCSS Exaple</title>
+	<meta name="description" content="Sveltekit and WindiCSS play well together!">
+</svelte:head>
 
 <div class:dark>
 	<nav class="dark:bg-gray-800 bg-gray-100">
