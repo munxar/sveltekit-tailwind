@@ -1,6 +1,6 @@
+import { defineConfig } from 'windicss/helpers'
 
-
-module.exports = {
+export default defineConfig({
     dark: 'class',
     plugins: [
         require('windicss/plugin/forms'),
@@ -12,4 +12,4 @@ module.exports = {
         // add more as needed
         // see: https://windicss.org/ for more info
     ],
-}
+})
